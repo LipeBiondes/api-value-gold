@@ -1,7 +1,7 @@
 {
-  "name": "puppeteer",
+  "name": "api-value-gold",
   "version": "1.0.0",
-  "description": "app para pegar informações de um site",
+  "description": "app para pegar informações do valor do ouro de um site e retornar em uma api",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js"
