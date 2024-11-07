@@ -1,0 +1,20 @@
+{
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "description": "app para pegar informações de um site",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "alefe",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "puppeteer": "^23.7.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
