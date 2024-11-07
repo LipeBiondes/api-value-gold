@@ -4,6 +4,7 @@
   "description": "app para pegar informações do valor do ouro de um site e retornar em uma api",
   "main": "index.js",
   "scripts": {
+    "dev": "node --watch ./src/index.js",
     "start": "node ./src/index.js"
   },
   "author": "alefe",
