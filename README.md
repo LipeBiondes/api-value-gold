@@ -22,11 +22,18 @@ Para iniciar a aplicação, execute:
 npm start
 ```
 
+Para iniciar a aplicação em modo de desenvolvimento, execute:
+
+```bash
+npm run dev
+```
+
 ## Dependências
 
+- **axios**: ^1.7.7
+- **cheerio**: ^1.0.0
 - **cors**: ^2.8.5
 - **express**: ^4.21.1
-- **express-rate-limit**: ^7.4.1
 - **puppeteer**: ^23.7.0
 
 ## Dev Dependências
