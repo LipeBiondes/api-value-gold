@@ -1,26 +1,22 @@
-const puppeteer = require('puppeteer')
+const axios = require('axios')
+const cheerio = require('cheerio')
 
 const getValueOfGold = async () => {
-  const browser = await puppeteer.launch()
-  const page = await browser.newPage()
+  try {
+    // Fazendo a requisição para a página
+    const { data } = await axios.get('https://dolarhoje.com/ouro-hoje/')
 
-  // Acessa a página e espera que a rede esteja ociosa
-  await page.goto('https://dolarhoje.com/ouro-hoje/', {
-    waitUntil: 'networkidle2'
-  })
+    // Usando o Cheerio para carregar o HTML da resposta
+    const $ = cheerio.load(data)
 
-  // Aguarda o seletor do input com o valor aparecer
-  await page.waitForSelector('#nacional')
+    // Selecionando o valor do ouro a partir do input com ID "nacional"
+    const value = $('#nacional').val()
 
-  // Extrai o valor do input com ID "nacional"
-  const data = await page.evaluate(() => {
-    const element = document.querySelector('#nacional')
-    return element ? element.value : null
-  })
-
-  await browser.close()
-
-  return data
+    return value
+  } catch (error) {
+    console.error('Erro ao buscar o valor do ouro:', error)
+    return null
+  }
 }
 
 module.exports = getValueOfGold
