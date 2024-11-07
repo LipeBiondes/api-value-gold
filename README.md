@@ -81,7 +81,7 @@ This project is licensed under the **MIT License**. For more details, check the 
 ## 👨‍💻 Author
 
 **Alefe**  
-[LinkedIn](https://www.linkedin.com/in/alefe)
+[LinkedIn](https://www.linkedin.com/in/alefe-filipe-biondes-magalh%C3%A3es-6591b8173/)
 
 ---
 
