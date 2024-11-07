@@ -19,6 +19,13 @@ app.use(limiter)
 app.use(cors())
 app.use(express.json())
 
+app.get('/', (req, res) => {
+  res.status(200).send({
+    message: 'Bem-vindo à API do valor do ouro!',
+    availableRoutes: [{ method: 'GET', path: '/gold/value' }]
+  })
+})
+
 app.get('/gold/value', async (req, res) => {
   try {
     const value = await getValueOfGold()
@@ -38,6 +45,13 @@ app.get('/gold/value', async (req, res) => {
       .status(500)
       .send({ message: 'Erro ao buscar o valor da grama do ouro' })
   }
+})
+
+app.use((__, res) => {
+  res.status(404).send({
+    message: 'Rota não encontrada.',
+    availableRoutes: [{ method: 'GET', path: '/gold/value' }]
+  })
 })
 
 const PORT = process.env.PORT || 3000
