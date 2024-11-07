@@ -1,20 +1,9 @@
 require('dotenv').config()
 const express = require('express')
-const rateLimit = require('express-rate-limit')
 const cors = require('cors')
 const getValueOfGold = require('./utils/get.gold.value')
 
 const app = express()
-
-const limiter = rateLimit({
-  windowMs: 10 * 60 * 1000,
-  max: 10,
-  message:
-    'Muitas requisições. Por favor, tente novamente depois de 15 minutos.',
-  headers: true
-})
-
-app.use(limiter)
 
 app.use(cors())
 app.use(express.json())
