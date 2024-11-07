@@ -34,7 +34,6 @@ npm run dev
 - **cheerio**: ^1.0.0
 - **cors**: ^2.8.5
 - **express**: ^4.21.1
-- **puppeteer**: ^23.7.0
 
 ## Dev Dependências
 
@@ -86,3 +85,10 @@ Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICEN
 ## Autor
 
 Alefe
+
+## Hospedagem
+
+A API está hospedada nos seguintes endereços:
+
+- [https://api-value-gold-production.up.railway.app/](https://api-value-gold-production.up.railway.app/)
+- [https://api-value-gold.onrender.com/](https://api-value-gold.onrender.com/)
